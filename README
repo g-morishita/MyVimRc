@@ -1,0 +1,7 @@
+Installation
+
+    git@github.com:kona-nkuN/MyVimRc.git
+
+Create symlinks:
+
+    ln -s ~/.vim/vimrc ~/.vimrc
