@@ -29,6 +29,6 @@ nnoremap B ^
 nnoremap $ <nop>
 nnoremap ^ <nop>
 
-" mapping jk to <ESC>
+" NERDTree setting
 execute pathogen#infect()
-autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTree " As soon as vim opens, NERDTree command is executed
