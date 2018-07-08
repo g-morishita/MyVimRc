@@ -32,3 +32,9 @@ nnoremap ^ <nop>
 " NERDTree setting
 execute pathogen#infect()
 autocmd VimEnter * NERDTree " As soon as vim opens, NERDTree command is executed
+
+" ctags setting
+nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
+nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
+" show list of candidates only if there is more than two candidates 
+nnoremap <C-]> g<C-]>
