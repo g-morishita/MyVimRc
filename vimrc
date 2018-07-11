@@ -3,6 +3,7 @@ let mapleader = ","
 
 " about tabs
 set tabstop=4 "tabspot is the unmber of spaces a <TAB> counts for.
+set shiftwidth=4 " make << >> insert 4 sapces
 set expandtab " a tab turns into just "four spaces".
 
 " UI config
@@ -110,3 +111,5 @@ endif
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
+" make it possible to copy texts to clipboard wtih vim
+set clipboard=unnamedplus
