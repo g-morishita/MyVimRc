@@ -1,0 +1,6 @@
+[submodule "/home/morishita-g/.vim/bundle/nerdtree"]
+	path = /home/morishita-g/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/vim-tags"]
+	path = bundle/vim-tags
+	url = https://github.com/szw/vim-tags.git
