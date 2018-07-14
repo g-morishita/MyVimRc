@@ -40,6 +40,8 @@ nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
 " show list of candidates only if there is more than two candidates 
 nnoremap <C-]> g<C-]>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" from here, neocomplete setting
 " note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -110,6 +112,12 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+" the end of setting of neocomplete
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " make it possible to copy texts to clipboard wtih vim
 set clipboard=unnamedplus
+
+
+" create helptags 
+autocmd VimEnter * Helptags
