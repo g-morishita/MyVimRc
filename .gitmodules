@@ -4,9 +4,6 @@
 [submodule "bundle/vim-tags"]
 	path = bundle/vim-tags
 	url = https://github.com/szw/vim-tags.git
-[submodule "bundle/surround"]
-	path = bundle/surround
-	url = https://github.com/tpope/vim-surround.git
 [submodule "bundle/neocomplete.vim"]
 	path = bundle/neocomplete.vim
 	url = https://github.com/Shougo/neocomplete.vim.git
