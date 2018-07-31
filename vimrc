@@ -40,6 +40,10 @@ nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
 " show list of candidates only if there is more than two candidates 
 nnoremap <C-]> g<C-]>
 
+" indent setting
+set autoindent " keep indent before the line
+set smartindent " insert indent properly
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " from here, neocomplete setting
 " note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
