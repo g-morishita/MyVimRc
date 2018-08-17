@@ -130,7 +130,6 @@ autocmd VimEnter * Helptags
 syntax enable
 set background=dark
 colorscheme gruvbox
-set mouse=a
 
 if &term =~ '256color'
     " disable Background Color Erase (BCE) so that color schemes
