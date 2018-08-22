@@ -1,15 +1,15 @@
-#Installation
+# Installation
 
     git clone git@github.com:kona-nkuN/MyVimRc.git
 
-#Create symlinks:
+# Create symlinks:
 
     ln -s ~/.vim/vimrc ~/.vimrc
-#Requirement
+# Requirement
 
 lua is needed to make neocomplete.vim work
 
-#Trouble shooting
+# Trouble shooting
 
 ## plugins doesn't work 
 If directories in bundle/ are empty, run these commands in .vim
