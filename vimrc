@@ -31,7 +31,6 @@ nnoremap $ <nop>
 nnoremap ^ <nop>
 
 " NERDTree setting
-execute pathogen#infect()
 autocmd VimEnter * NERDTree " As soon as vim opens, NERDTree command is executed
 
 " ctags setting
@@ -121,9 +120,6 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " make it possible to copy texts to clipboard wtih vim
 set clipboard=unnamedplus
-
-" create helptags 
-autocmd VimEnter * Helptags
 
 " This is a setting to use gruvbox. Modified 2018.8.11
 syntax enable
