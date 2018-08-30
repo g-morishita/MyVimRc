@@ -122,7 +122,6 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 " make it possible to copy texts to clipboard wtih vim
 set clipboard=unnamedplus
 
-
 " create helptags 
 autocmd VimEnter * Helptags
 
@@ -151,6 +150,15 @@ if dein#load_state('~/.cache/dein')
 
     call dein#add('~/.cache/dein')
     call dein#add('Shougo/deoplete.nvim')
+    call dein#add('Shougo/neocomplete')
+    call dein#add('cohama/lexima.vim')
+    call dein#add('Shougo/neocomplete.vim')
+    call dein#add('scrooloose/nerdtree')
+    call dein#add('tpope/vim-surround')
+    call dein#add('szw/vim-tags')
+    call dein#add('mattn/emmet-vim')
+    call dein#add('pangloss/vim-javascript')
+    call dein#add('Kutimotitokura/AtCoderSubmitter.vim')
     if !has('nvim')
         call dein#add('roxma/nvim-yarp')
         call dein#add('roxma/vim-hug-neovim-rpc')
@@ -158,6 +166,10 @@ if dein#load_state('~/.cache/dein')
 
     call dein#end()
     call dein#save_state()
+endif
+
+if dein#check_install()
+    call dein#install()
 endif
 
 filetype plugin indent on
