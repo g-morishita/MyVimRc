@@ -1,20 +1,26 @@
-# Installation
+# Setting
+## Installation
 
-    git clone git@github.com:kona-nkuN/MyVimRc.git
+```
+git clone git@github.com:kona-nkuN/MyVimRc.git
+mv MyVimRc .vim
+```
 
-# Create symlinks:
+## Create symlinks:
 
-    ln -s ~/.vim/vimrc ~/.vimrc
+```
+ln -s ~/.vim/vimrc ~/.vimrc
+```
+
+## Setting of dein 
+```
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+# For example, we just use `~/.cache/dein` as installation directory
+sh ./installer.sh ~/.cache/dein
+```
+
 # Requirement
 
 lua is needed to make neocomplete.vim work
 
 # Trouble shooting
-
-## plugins doesn't work 
-You don't need it anymore because I have stopped using bundle. Instead I will use dein.vim to manage packages. 
-If directories in bundle/ are empty, run these commands in .vim
-
-    git submodule init
-    git submodule update
-
