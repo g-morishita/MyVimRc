@@ -1,6 +1,42 @@
 let leader = ","
 let mapleader = ","
 
+" the setting of dein
+if &compatible
+    set nocompatible
+endif
+
+" Add the dein installation directory into runtimepath
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state('~/.cache/dein')
+    call dein#begin('~/.cache/dein')
+
+    call dein#add('~/.cache/dein')
+    call dein#add('Shougo/deoplete.nvim')
+    call dein#add('Shougo/neocomplete')
+    call dein#add('cohama/lexima.vim')
+    call dein#add('Shougo/neocomplete.vim')
+    call dein#add('scrooloose/nerdtree')
+    call dein#add('tpope/vim-surround')
+    call dein#add('szw/vim-tags')
+    call dein#add('mattn/emmet-vim')
+    call dein#add('pangloss/vim-javascript')
+    call dein#add('Kutimotitokura/AtCoderSubmitter.vim')
+    call dein#add('morhetz/gruvbox')
+    if !has('nvim')
+        call dein#add('roxma/nvim-yarp')
+        call dein#add('roxma/vim-hug-neovim-rpc')
+    endif
+
+    call dein#end()
+    call dein#save_state()
+endif
+
+if dein#check_install()
+    call dein#install()
+endif
+
 " about tabs
 set tabstop=4 "tabspot is the unmber of spaces a <TAB> counts for.
 set shiftwidth=4 " make << >> insert 4 sapces
@@ -131,41 +167,6 @@ if &term =~ '256color'
     " render properly when inside 256-color tmux and GNU screen.
     " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
     set t_ut=
-endif
-
-" the setting of dein
-if &compatible
-    set nocompatible
-endif
-
-" Add the dein installation directory into runtimepath
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
-
-if dein#load_state('~/.cache/dein')
-    call dein#begin('~/.cache/dein')
-
-    call dein#add('~/.cache/dein')
-    call dein#add('Shougo/deoplete.nvim')
-    call dein#add('Shougo/neocomplete')
-    call dein#add('cohama/lexima.vim')
-    call dein#add('Shougo/neocomplete.vim')
-    call dein#add('scrooloose/nerdtree')
-    call dein#add('tpope/vim-surround')
-    call dein#add('szw/vim-tags')
-    call dein#add('mattn/emmet-vim')
-    call dein#add('pangloss/vim-javascript')
-    call dein#add('Kutimotitokura/AtCoderSubmitter.vim')
-    if !has('nvim')
-        call dein#add('roxma/nvim-yarp')
-        call dein#add('roxma/vim-hug-neovim-rpc')
-    endif
-
-    call dein#end()
-    call dein#save_state()
-endif
-
-if dein#check_install()
-    call dein#install()
 endif
 
 filetype plugin indent on
