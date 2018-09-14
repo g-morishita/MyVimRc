@@ -31,16 +31,18 @@ if dein#load_state('~/.cache/dein')
 
     call dein#end()
     call dein#save_state()
+    let g:deoplete#enable_at_startup = 1 
 endif
 
 if dein#check_install()
     call dein#install()
 endif
 
-" about tabs
-set tabstop=4 "tabspot is the unmber of spaces a <TAB> counts for.
-set shiftwidth=4 " make << >> insert 4 sapces
-set expandtab " a tab turns into just "four spaces".
+" about tabs {{
+set tabstop=2 "tabspot is the unmber of spaces a <TAB> counts for.
+set shiftwidth=2 " make << >> insert 4 sapces
+set expandtab " a tab turns into just spaces
+"}}
 
 " UI config
 set number " show line numbers
