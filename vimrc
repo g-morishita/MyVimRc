@@ -89,6 +89,7 @@ set clipboard=unnamedplus
 syntax enable
 set background=dark
 colorscheme gruvbox
+set t_Co=256
 
 if &term =~ '256color'
     " disable Background Color Erase (BCE) so that color schemes
