@@ -122,7 +122,7 @@ filetype plugin indent on
 let g:airline_powerline_fonts = 1
 
 " カラーテーマ指定してかっこよく
-let g:airline_theme = 'badwolf'
+let g:airline_theme = 'gruvbox'
 
 " タブバーをかっこよく
 let g:airline#extensions#tabline#enabled = 1
