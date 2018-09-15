@@ -32,7 +32,6 @@ if dein#load_state('~/.cache/dein')
 
     call dein#end()
     call dein#save_state()
-    let g:deoplete#enable_at_startup = 1 
 endif
 
 if dein#check_install()
@@ -117,6 +116,9 @@ filetype plugin indent on
 "  \ 'S'  : 'S',
 "  \ '' : 'S',
 "  \ }
+
+" enable deoplete 
+let g:deoplete#enable_at_startup = 1 
 
 " パワーラインでかっこよく
 let g:airline_powerline_fonts = 1
