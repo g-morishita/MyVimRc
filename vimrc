@@ -145,3 +145,6 @@ let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linen
 " let g:airline#extensions#ale#error_symbol = 'E:'
 " let g:airline#extensions#ale#warning_symbol = 'W:'
 " }}
+
+" to make backspace work correctly
+set backspace=2
