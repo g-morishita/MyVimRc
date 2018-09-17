@@ -3,14 +3,15 @@ let leader = ","
 let mapleader = ","
 
 let s:quickfixWindow = "close"
-function! s:openCloseQuickfix()
-  if "open" ==? g:quickfixWindow
+function! OpenCloseQuickfix()
+  if "open" ==? s:quickfixWindow
     let s:quickfixWindow = "close"
     cclose
   else
     let s:quickfixWindow = "open"
     copen
   end
+  echo s:quickfixWindow
 endfunction
 
-nnoremap <C-c> call s:openCloseQuickfix()
+nnoremap <C-j> :call OpenCloseQuickfix()<CR>
