@@ -24,7 +24,9 @@ if dein#load_state('~/.cache/dein')
     call dein#add('Shougo/denite.nvim')
     call dein#add('vim-airline/vim-airline')
     call dein#add('davidhalter/jedi')
+    call dein#add('davidhalter/jedi-vim')
     call dein#add('zchee/deoplete-jedi')
+    call dein#add('w0rp/ale')
     if !has('nvim')
         call dein#add('roxma/nvim-yarp')
         call dein#add('roxma/vim-hug-neovim-rpc')
@@ -148,3 +150,6 @@ let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linen
 
 " to make backspace work correctly
 set backspace=2
+
+" disabled jedi-vim auto completion
+let g:jedi#completions_enabled = 0
