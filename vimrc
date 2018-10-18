@@ -27,6 +27,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('davidhalter/jedi-vim')
     call dein#add('zchee/deoplete-jedi')
     call dein#add('w0rp/ale')
+    call dein#add('thinca/vim-quickrun')
     if !has('nvim')
         call dein#add('roxma/nvim-yarp')
         call dein#add('roxma/vim-hug-neovim-rpc')
@@ -73,6 +74,8 @@ nnoremap ^ <nop>
 
 " NERDTree setting
 autocmd VimEnter * NERDTree " As soon as vim opens, NERDTree command is executed
+nnoremap <leader>N :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeFocus<CR>
 
 " ctags setting
 nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
@@ -153,3 +156,6 @@ set backspace=2
 
 " disabled jedi-vim auto completion
 let g:jedi#completions_enabled = 0
+
+" quickrun setting
+noremap r :QuickRun<CR>
