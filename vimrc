@@ -158,4 +158,4 @@ set backspace=2
 let g:jedi#completions_enabled = 0
 
 " quickrun setting
-noremap r :QuickRun<CR>
+noremap <leader>q :QuickRun<CR>
