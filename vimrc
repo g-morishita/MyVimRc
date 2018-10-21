@@ -48,19 +48,20 @@ set shiftwidth=2 " make << >> insert 4 sapces
 set expandtab " a tab turns into just spaces
 "}}
 
-" UI config
+" UI config {{
 set number " show line numbers
 set cursorline " highlight the current line
 set showmatch " highlight matching {}, [], ()
+" }}
 
-" searching setting
+" searching setting {{
 set incsearch " start searching as soon as you start typing
 set hlsearch " highlight the matches
-" 
 nnoremap <leader><space> :nohlsearch<CR> 
+"}} 
 
-" movement setting
-"move vertically by visula line
+" movement setting {{
+" move vertically by visula line
 nnoremap j gj
 nnoremap k gk
 
@@ -68,14 +69,15 @@ nnoremap k gk
 nnoremap E $
 nnoremap B ^
 
-" $/^ doesn't do anything
+" make $/^ do nothing 
 nnoremap $ <nop>
 nnoremap ^ <nop>
+" }}
 
 " NERDTree setting
 autocmd VimEnter * NERDTree " As soon as vim opens, NERDTree command is executed
-nnoremap <leader>N :NERDTreeToggle<CR>
-nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>N :NERDTreeToggle<CR> 
+nnoremap <leader>F :NERDTreeFocus<CR>
 
 " ctags setting
 nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
@@ -88,7 +90,7 @@ set autoindent " keep indent before the line
 set smartindent " insert indent properly
 
 " make it possible to copy texts to clipboard wtih vim
-set clipboard=unnamedplus
+set clipboard=unnamedplus "TODO: This doesn't work. no idea why not.
 
 " This is a setting to use gruvbox. Modified 2018.8.11
 syntax enable
