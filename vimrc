@@ -19,7 +19,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('scrooloose/nerdtree')
     call dein#add('tpope/vim-surround')
     call dein#add('szw/vim-tags')
-    call dein#add('mattn/emmet-vim')
+    " call dein#add('mattn/emmet-vim') no need for now
     call dein#add('morhetz/gruvbox')
     call dein#add('Shougo/denite.nvim')
     call dein#add('vim-airline/vim-airline')
