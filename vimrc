@@ -108,6 +108,9 @@ endif
 
 filetype plugin indent on
 
+" enable deoplete 
+let g:deoplete#enable_at_startup = 1 
+
 " {{
 " vim-airline/vim-airline setting
 " モードの表示名を定義(デフォルトだと長くて横幅を圧迫するので略称にしている)
@@ -125,9 +128,6 @@ filetype plugin indent on
 "  \ 'S'  : 'S',
 "  \ '' : 'S',
 "  \ }
-
-" enable deoplete 
-let g:deoplete#enable_at_startup = 1 
 
 " パワーラインでかっこよく
 let g:airline_powerline_fonts = 1
