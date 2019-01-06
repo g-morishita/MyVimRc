@@ -2,6 +2,7 @@
 nnoremap <C-b> :w<CR>:!g++ -std=c++14 % -o %:p:h/a.out<CR> <CR>
 " }}
 
+" atcoder用
 function! AtCoderSetURL()
   call inputsave()
   let g:atCoderURL = input('ENTER URL: ')
@@ -27,7 +28,12 @@ function! AtCoderSubmit()
   execute "!oj submit " . g:atCoderURL . " " . expand('%:p')
 endfunction
 
+function! AtCoderCleanTest()
+  execute "rm -r test"
+endfunction
+
+nnoremap <leader>c :call AtCoderCleanTest()<CR>
 nnoremap <leader>u :call AtCoderSetURL()<CR>
-nnoremap <leader>t :w<CR>:call AtCoderTest()<CR>
+nnoremap <leader>t :w<nCR>:call AtCoderTest()<CR>
 nnoremap <leader>d :call AtCoderDownload()<CR>
 nnoremap <leader>s :w<CR>:call AtCoderSubmit()<CR>
