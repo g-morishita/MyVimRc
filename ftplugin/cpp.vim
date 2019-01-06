@@ -12,7 +12,7 @@ function! AtCoderDownload()
   if !exists("g:atCoderURL")
     call AtCoderSetURL()
   endif
-  execute "!oj download" . g:atCoderURL
+  execute "!oj download " . g:atCoderURL
 endfunction
 
 function! AtCoderTest()
