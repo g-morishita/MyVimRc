@@ -16,7 +16,7 @@ function! AtCoderDownload()
 endfunction
 
 function! AtCoderTest()
-  execute "!oj test " . %:p:h . "/a.out"
+  execute "!oj test " . expand('%:p:h') . "/a.out"
 endfunction
 
 function! AtCoderSubmit()
@@ -27,7 +27,7 @@ function! AtCoderSubmit()
   execute "!oj submit " . g:atCoderURL
 endfunction
 
-nnoremap <leader>u :call AtCoderSetURL()
-nnoremap <leader>t :w<CR>:call AtCoderTest()
-nnoremap <leader>d :call AtCoderDownload()
-nnoremap <leader>s :w<CR>:call AtCoderSubmit()
+nnoremap <leader>u :call AtCoderSetURL()<CR>
+nnoremap <leader>t :w<CR>:call AtCoderTest()<CR>
+nnoremap <leader>d :call AtCoderDownload()<CR>
+nnoremap <leader>s :w<CR>:call AtCoderSubmit()<CR>
