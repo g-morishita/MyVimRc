@@ -81,8 +81,8 @@ nnoremap <leader>N :NERDTreeToggle<CR>
 nnoremap <leader>F :NERDTreeFocus<CR>
 
 "  Denite setting {{
-nnoremap <leader>d :Denite buffer
-nnoremap <leader>a :Denite file/rec buffer
+nnoremap <leader>b :Denite buffer<CR>
+nnoremap <leader>a :Denite file/rec buffer<CR>
 "}}
 
 
