@@ -81,8 +81,27 @@ nnoremap <leader>N :NERDTreeToggle<CR>
 nnoremap <leader>F :NERDTreeFocus<CR>
 
 "  Denite setting {{
-nnoremap <leader>b :Denite buffer<CR>
-nnoremap <leader>a :Denite file/rec buffer<CR>
+"ESC key ends denite
+call denite#custom#map('insert', '<esc>', '<denite:enter_mode:normal>', 'noremap')
+call denite#custom#map('normal', '<esc>', '<denite:quit>', 'noremap')
+"C-N,C-Pで上下移動
+call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
+"C-J,C-Kでsplitで開く
+call denite#custom#map('insert', '<C-j>', '<denite:do_action:split>', 'noremap')
+call denite#custom#map('insert', '<C-k>', '<denite:do_action:vsplit>', 'noremap')
+
+" The following key maps are used when denite is runnnig.
+" List the buffer
+noremap <C-P> :Denite buffer<CR>
+" List the files
+noremap <C-N> :Denite -buffer-name=file file<CR>
+" List the files opened recently
+noremap <C-Z> :Denite file_old<CR>
+" List files in the current directory
+noremap <C-C> :Denite file_rec<CR>
+" List the buffer 
+nnoremap sB :<C-u>Denite buffer -buffer-name=file<CR>
 "}}
 
 
