@@ -2,7 +2,7 @@
 nnoremap <C-b> :w<CR>:!g++ -std=c++14 % -o %:p:h/a.out<CR>
 " }}
 
-" atcoder用 {{
+" atcoder {{
 function! AtCoderSetURL()
   call inputsave()
   let g:atCoderURL = input('ENTER URL: ')

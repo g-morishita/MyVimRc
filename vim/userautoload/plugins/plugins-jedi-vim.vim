@@ -1,2 +1,2 @@
 " disabled jedi-vim auto completion
-" let g:jedi#completions_enabled = 0
+let g:jedi#completions_enabled = 0
